@@ -1,18 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
 
+:root {
+  --primary-color: #F59E0B;
+  --dark-gray: #6B7280;
+  --off-white:#F3F4F6;
+}
+
+/* Header */
+
+header {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+header h1 {
+  font-family: "Megrim", cursive;
+  text-align: initial;
+}
+
+nav {
+  text-align: right;
+}
+
+nav > a {
+  padding: 0 0.5rem;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
+  margin-top:10vh;
+}
+
+.footer .link {
+  color: white;
+
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+  padding-top:5vh;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --primary-color: #7c3aed;
-}
-
 body {
   font-family: "Work Sans", sans-serif;
-  text-align: center;
 }
 
 /* Header */
@@ -21,23 +66,37 @@ header h1 {
   margin: 2rem;
 }
 
+/*  Input */
+
+.input-label {
+  font-size: larger;
+  color: var(--primary-color);
+  width: 256px;
+}
+
+.input-label p {
+  font-size: larger;
+  margin: 0.5rem;
+}
+
+.input-text {
+  font-size: 14px;
+  outline: #fff;
+  padding: 0.6rem 1rem;
+  margin: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  margin: auto;
+ text-align: center;
+  margin-left:35vh;
+}
 .input-label {
   display: block;
   font-size: larger;
   margin: 2rem 0px;
   font-weight: 600;
-}
-
-.input {
-  font-size: large;
-  display: block;
-  outline: #fff;
-  padding: 0.6rem 1rem;
-  margin: 1rem auto;
-  border: 2px solid var(--primary-color);
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 325px;
+width: 70%;
 }
 
 .btn-check {
@@ -57,4 +116,30 @@ header h1 {
   font-size: x-large;
   font-weight: 600;
   margin: 2rem 0;
+}
+/* list */
+
+.list-non-bullet {
+  list-style: none;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
+
+
+/* container */
+container {
+  padding: 0rem 1rem;
+}
+
+.container-center {
+  width: 100%;
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+  padding: 0. 1rem;
 }

@@ -10,23 +10,46 @@
 </head>
 
 <body>
-    <h1>Stocks profit or loss</h1>
-    <main>
-        <label for="initial-price">initial Price
-            <input id="initial-price" type="number" placeholder="Enter Initial Price" />
+        <header>
+    <h1  className="header">Stocks Profit or Loss</h1>
+      </header>
+    <div class="container container-center">
+        <label for="initial-price" class='input-label'>initial Price
+            <input id="initial-price" type="number" class="side-input input-text" placeholder="Enter Initial Price" />
         </label>
 
-        <label for="stocks-quantity">Quantity of Stocks
-            <input id="stocks-quantity" type="number" placeholder="Enter the Number of Stocks bought" />
+        <label for="stocks-quantity" class='input-label'>Quantity of Stocks
+            <input id="stocks-quantity" type="number"  class="side-input input-text" placeholder="Enter the Number of Stocks bought" />
         </label>
-        <label for="current-price">Current Price
-            <input id="current-price" type="number" placeholder="Enter the Current Price of the Stocks" />
+        <label for="current-price" class='input-label'>Current Price
+            <input id="current-price" type="number" class="side-input input-text" placeholder="Enter the Current Price of the Stocks" />
         </label>
 
-        <button id="submit-btn">Tell Me</button>
+        <button id="submit-btn" class="btn-check">Tell Me</button>
         <div id="output-box"></div>
+    </div>
+    <footer class="footer container">
+        <div class="footer-header">Connect with me on social media</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/rodriguescarson">
+                    Linkedin
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/rodriguescarson">
+                    Github
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/carsonmarz">
+                    twitter
+                </a>
+            </li>
+        </ul>
+    </footer>
         <script src="app.js"></script>
-    </main>
+    
 </body>
 
 </html>
