@@ -4,24 +4,35 @@ var currentPrice = document.querySelector("#current-price");
 var submitBtn = document.querySelector("#submit-btn");
 var outputBox = document.querySelector("#output-box");
 
-function calculateProfitAndLoss(initialPrice,stocksQuantity,currentPrice) {
-    console.log(initialPrice, stocksQuantity, currentPrice);
+function calculateProfitAndLoss(initialPriceString, stocksQuantityString, currentPriceString) {
+    const initialPrice = Number(initialPriceString);
+    const stocksQuantity = Number(stocksQuantityString);
+    const currentPrice = Number(currentPriceString);
     if (initialPrice > currentPrice) {
+
+        console.log(typeof (initialPrice), typeof (currentPrice))
         //loss
-        var loss = (initialPrice - currentPrice) * stocksQuantity;
-        var lossPercentage = (loss / initialPrice) * 100;
+        const loss = (initialPrice - currentPrice) * stocksQuantity;
+        console.log(loss);
+        const lossPercentage = (loss / initialPrice) * 100;
+        console.log(lossPercentage);
         outputBox.style.color = "red";
         outputBox.innerText = `Hey the loss is ${loss} and the loss percentage is ${lossPercentage}`;
-        
+
     } else if (initialPrice < currentPrice) {
         //profit
-        var profit = (currentPrice-initialPrice) * stocksQuantity;
-        var profitPercentage = (profit / initialPrice) * 100;
+
+        const profit = (currentPrice - initialPrice) * stocksQuantity;
+        console.log(profit)
+        const profitPercentage = (profit / initialPrice) * 100;
+        console.log(profitPercentage)
         outputBox.style.color = "green";
-        outputBox.innerText = `Hey the profit is ${profit} and the profit percentage is ${profitPercentage}`;       
+
+        outputBox.innerText = `Hey the profit is ${profit} and the profit percentage is ${profitPercentage}`;
     } else {
         //same
-        outputBox.innerText = `No pain , no gain! No gain, no pain`;       
+        outputBox.style.color = "black";
+        outputBox.innerText = `No pain , no gain! No gain, no pain`;
     }
 }
 
