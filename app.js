@@ -8,31 +8,38 @@ function calculateProfitAndLoss(initialPriceString, stocksQuantityString, curren
     const initialPrice = Number(initialPriceString);
     const stocksQuantity = Number(stocksQuantityString);
     const currentPrice = Number(currentPriceString);
-    if (initialPrice > currentPrice) {
 
-        console.log(typeof (initialPrice), typeof (currentPrice))
-        //loss
-        const loss = (initialPrice - currentPrice) * stocksQuantity;
-        console.log(loss);
-        const lossPercentage = (loss / initialPrice) * 100;
-        console.log(lossPercentage);
-        outputBox.style.color = "red";
-        outputBox.innerText = `Hey the loss is ${loss} and the loss percentage is ${lossPercentage}`;
-
-    } else if (initialPrice < currentPrice) {
-        //profit
-
-        const profit = (currentPrice - initialPrice) * stocksQuantity;
-        console.log(profit)
-        const profitPercentage = (profit / initialPrice) * 100;
-        console.log(profitPercentage)
-        outputBox.style.color = "green";
-
-        outputBox.innerText = `Hey the profit is ${profit} and the profit percentage is ${profitPercentage}`;
-    } else {
-        //same
+    if (initialPrice < 0 || stocksQuantity < 0 || currentPrice < 0) {
         outputBox.style.color = "black";
-        outputBox.innerText = `No pain , no gain! No gain, no pain`;
+        outputBox.innerText = "Please enter positive numbers";
+    } else {
+
+        if (initialPrice > currentPrice) {
+
+            console.log(typeof (initialPrice), typeof (currentPrice))
+            //loss
+            const loss = (initialPrice - currentPrice) * stocksQuantity;
+            console.log(loss);
+            const lossPercentage = (loss / initialPrice) * 100;
+            console.log(lossPercentage);
+            outputBox.style.color = "red";
+            outputBox.innerText = `Hey the loss is ${loss} and the loss percentage is ${lossPercentage}`;
+
+        } else if (initialPrice < currentPrice) {
+            //profit
+
+            const profit = (currentPrice - initialPrice) * stocksQuantity;
+            console.log(profit)
+            const profitPercentage = (profit / initialPrice) * 100;
+            console.log(profitPercentage)
+            outputBox.style.color = "green";
+
+            outputBox.innerText = `Hey the profit is ${profit} and the profit percentage is ${profitPercentage}`;
+        } else {
+            //same
+            outputBox.style.color = "black";
+            outputBox.innerText = `No pain , no gain! No gain, no pain`;
+        }
     }
 }
 
